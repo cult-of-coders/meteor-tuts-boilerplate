@@ -1,0 +1,29 @@
+textarea {
+  width: 100%;
+  resize: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  transition: border-bottom-color 180ms $animation-standard-curve,
+              background-color 180ms $animation-standard-curve;
+
+  border-bottom: 1px solid rgba($color-black, 0.12);
+  padding: 10px 16px;
+  border-radius: 2px 2px 0 0;
+  background-color: rgba($color-black, 0.04);
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom-color: $color-text;
+    background-color: rgba($color-black, 0.1);
+  }
+}

@@ -1,0 +1,52 @@
+//remove ie select arrow
+select::-ms-expand {
+  display: none;
+}
+
+//fix ie selected value color and background
+select:focus::-ms-value {
+  background-color: transparent;
+  color: inherit;
+}
+
+//remove ff dotted line on focus
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+
+select {
+  width: 100%;
+  appearance: none;
+  border: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2210px%22%20height%3D%225px%22%20viewBox%3D%227%2010%2010%205%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3Cpolygon%20id%3D%22Shape%22%20stroke%3D%22none%22%20fill%3D%22%230%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.54%22%20points%3D%227%2010%2012%2015%2017%2010%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E);
+  cursor: pointer;
+
+  transition: border-bottom-color 180ms $animation-standard-curve,
+              background-color 180ms $animation-standard-curve;
+
+  background-color: rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(black, 0.12);
+  padding: 10px 16px;
+  border-radius: 2px 2px 0 0;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom-color: $color-text;
+    background-color: rgba(black, 0.1);
+  }
+}

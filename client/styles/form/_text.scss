@@ -1,0 +1,63 @@
+input::placeholder,
+::placeholder {
+  color: rgba(black, 0.38);
+  transition: color 180ms $animation-standard-curve;
+  opacity: 1;
+}
+
+textarea:focus::placeholder,
+input:focus::placeholder {
+  color: rgba(black, 0.54);
+}
+
+//change input type number appearance
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+//remove ie clear button from input
+::-ms-clear {
+  display: none;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=tel],
+input[type=email],
+input[type=search],
+input[type=url] {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+
+
+  transition: border-bottom-color 180ms $animation-standard-curve,
+              background-color 180ms $animation-standard-curve;
+
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba($color-black, 0.12);
+  border-radius: 2px 2px 0 0;
+  background-color: rgba($color-black, 0.04);
+
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom-color: $color-text;
+    background-color: rgba(black, 0.1);
+  }
+}
+
+
+

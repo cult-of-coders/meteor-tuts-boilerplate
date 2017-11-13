@@ -1,0 +1,13 @@
+.cc-columns {
+  display: flex;
+
+  .cc-50 {
+    flex-basis: 50%;
+    flex-shrink: 1;
+  }
+
+  .cc-25 {
+    flex-basis: 25%;
+    flex-shrink: 1;
+  }
+}

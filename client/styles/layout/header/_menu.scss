@@ -1,0 +1,19 @@
+.cc-menu {
+  display: flex;
+
+  &__item {
+    margin: 0 10px;
+
+    &.cc--active {
+
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  &__label {
+
+  }
+}

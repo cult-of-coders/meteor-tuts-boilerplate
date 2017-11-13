@@ -1,0 +1,47 @@
+.cc-checkbox {
+  label {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+      left: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-text;
+    }
+
+    &:after {
+      content: '';
+      pointer-events: none;
+      display: block;
+      width: 6px;
+      height: 10px;
+      border: solid $color-black;
+      border-width: 0 3px 3px 0;
+      position: absolute;
+      top: 50%;
+      left: 7px;
+      margin-top: -6px;
+      transform: rotate(45deg) scale(0);
+      transition: transform 90ms 0ms $animation-standard-curve;
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked ~ label {
+    &:after {
+      transform: rotate(45deg) scale(1);
+    }
+  }
+}

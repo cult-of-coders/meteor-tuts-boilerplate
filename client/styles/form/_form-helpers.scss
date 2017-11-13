@@ -1,0 +1,21 @@
+.cc-form {
+  &__error {
+    color: $color-error;
+  }
+
+  &__row {
+    width: 100%;
+    margin-bottom: 40px;
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__row-submit {
+    margin-top: 40px;
+  }
+}
+
+
+

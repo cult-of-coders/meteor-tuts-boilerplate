@@ -1,0 +1,49 @@
+.cc-radio {
+  label {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+      left: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-text;
+      border-radius: 50%;
+    }
+
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      margin-top: -5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $color-text;
+      transform: scale(0);
+      transition: transform 90ms 0ms cubic-bezier(0.4, 0, 0.6, 1);
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked ~ label {
+    &:after {
+      transform: scale(1);
+    }
+  }
+}

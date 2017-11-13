@@ -1,0 +1,16 @@
+.cc-header {
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  box-shadow: $shadow-dp2;
+  background-color: $color-white;
+}
+
+.cc-logo {
+  img {
+    display: block;
+    max-width: 150px;
+  }
+}
